@@ -133,7 +133,6 @@ jobs:
   flake8:
     name: Lint Python scripts
     needs: setup
-    if: ${{ github.event.pull_request.draft == false }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
