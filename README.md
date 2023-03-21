@@ -1,4 +1,4 @@
 # minimal-actions
 
-Experiments with restricting when github actions are run.
+More experiments with restricting when github actions are run.
 
