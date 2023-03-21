@@ -24,7 +24,7 @@ jobs:
   setup:
     name: Setup cache and determine changed repositories
     runs-on: ubuntu-latest
-    if: github.event.pull_request.draft == false
+    if: ${{ github.event.pull_request.draft == false }}
     outputs:
       galaxy-head-sha: ${{ steps.get-galaxy-sha.outputs.galaxy-head-sha }}
       repository-list: ${{ steps.discover.outputs.repository-list }}
@@ -131,7 +131,7 @@ jobs:
   flake8:
     name: Lint Python scripts
     needs: setup
-    if: ${{ needs.setup.outputs.repository-list != '' }}
+    if: ${{ github.event.pull_request.draft == false }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
