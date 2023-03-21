@@ -165,7 +165,7 @@ jobs:
   lintr:
     name: Lint R scripts
     needs: setup
-    if: ${{ github.event.pull_request.draft == false && needs.setup.outputs.repository-list != '' }}
+    if: ${{ github.event.pull_request.draft == false }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
