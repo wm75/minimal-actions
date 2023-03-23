@@ -1,1 +1,1 @@
-:deciduous_tree: eco-tip: open your PR as a draft to skip automated tests
+:green_heart: Consider creating this pull request as a draft
